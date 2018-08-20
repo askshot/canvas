@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+https://fervent-lewin-3da4bf.netlify.com/* https://www.supplyui.com/:splat 301!

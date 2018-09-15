@@ -1,0 +1,29 @@
+<svg id="Logo.svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31.75" height="54.031" viewBox="0 0 31.75 54.031">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-1 {
+        filter: url(#filter);
+      }
+
+      .cls-2 {
+        filter: url(#filter-2);
+      }
+    </style>
+    <filter id="filter" x="30" y="378" width="29.563" height="29.656" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#36f"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-2" x="32.188" y="402.344" width="29.563" height="29.687" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#36f"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="Rounded_Rectangle_2" data-name="Rounded Rectangle 2" class="cls-1" d="M50.511,378.349l8.693,8.674a1.2,1.2,0,0,1,0,1.688L40.728,407.328a1.189,1.189,0,0,1-1.684,0l-8.693-8.675a1.2,1.2,0,0,1,0-1.688l18.481-18.616A1.187,1.187,0,0,1,50.511,378.349Z" transform="translate(-30 -378)"/>
+  <path id="Rounded_Rectangle_2-2" data-name="Rounded Rectangle 2" class="cls-2" d="M52.691,402.668l8.693,8.675a1.2,1.2,0,0,1,0,1.688L42.908,431.648a1.189,1.189,0,0,1-1.684,0l-8.693-8.674a1.2,1.2,0,0,1,0-1.688l18.481-18.617A1.189,1.189,0,0,1,52.691,402.668Z" transform="translate(-30 -378)"/>
+</svg>

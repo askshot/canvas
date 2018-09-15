@@ -1,17 +1,5 @@
 @charset "UTF-8";
 
-/*
-
-Style   : MobApp CSS
-Version : 1.0
-Author  : Surjith S M
-URI     : https://surjithctly.in/
-
-Copyright © All rights Reserved 
-
-*/
-
-
 /*------------------------
 [TABLE OF CONTENTS]
     
@@ -823,6 +811,6 @@ header {
 /*  FOOTER
 ----------------------*/
 .footer {
-    height: 500px;
+    height: 200px;
     background-color: #1f1f89;
 }

@@ -25,14 +25,14 @@
 
 a {
     color: #000000;
-    font-family: "SourceSansPro-Bold";
+    font-family: "Poppins-Semibold";
     font-size: 20px;
 }
 
 a.navlink {
     width: 53px;
     height: 10px;
-    font-family: "SourceSansPro-Bold";
+    font-family: "Poppins-Semibold";
     font-weight: bold;
     font-style: normal;
     font-stretch: normal;
@@ -112,7 +112,7 @@ p.lead {
     padding: 0.375rem 1.35rem;
     transition: all 0.3s ease;
     background-color: #3878ff;
-    font-family: "SourceSansPro-Bold";
+    font-family: "Poppins-Semibold";
     position: relative;
     border-radius: 10px;
 }
@@ -123,9 +123,9 @@ p.lead {
     padding: 0.375rem 1.35rem;
     transition: all 0.3s ease;
     background-color: #3878ff;
-    font-family: "SourceSansPro-Bold";
+    font-family: "Poppins-Semibold";
     position: relative;
-    width: 184px;
+    width: 200px;
     top: 184px;
     border-radius: 10px;
     cursor: pointer;
@@ -137,11 +137,11 @@ p.lead {
     padding: 0.375rem 1.35rem;
     transition: all 0.3s ease;
     background-color: #3878ff;
-    font-family: "SourceSansPro-Bold";
+    font-family: "Poppins-Semibold";
     margin: auto;
     margin-top: 50px;
     color: #ffffff;
-    width: 184px;
+    width: 200px;
     border-radius: 10px;
     cursor: pointer;
 }

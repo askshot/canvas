@@ -551,14 +551,14 @@ header {
     top: 64px;
     left: 50px;
     color: #ffffff;
-    font-family: "Ubuntu-Bold";
+    font-family: "Ubuntu-Bold","SourceSansPro-Bold";
 }
 
 .price {
     position: relative;
     left: 60px;
     color: #ffffff;
-    font-family: "Ubuntu-Bold";
+    font-family: "Ubuntu-Bold","SourceSansPro-Bold";
     font-size: 120px;
 }
 
@@ -567,7 +567,7 @@ header {
     top: -120px;
     left: 200px;
     color: #ffffff;
-    font-family: "Ubuntu-Bold";
+    font-family: "Ubuntu-Bold","SourceSansPro-Bold";
     font-size: 45px;
 }
 

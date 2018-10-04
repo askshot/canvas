@@ -46,6 +46,13 @@ a:hover {
     text-decoration: none;
 }
 
+/* @media (max-width:414px) {
+    .container {
+        margin-right: 30px;
+        margin-left: 30px
+    }
+} */
+
 h1 {
     width: 414px;
     height: 104px;
@@ -61,6 +68,26 @@ h1 {
     color: #1f1f89;
 }
 
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 70px;
+    }
+}
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 55px;
+    }
+}
+
+@media (max-width: 414px) {
+    h1 {
+        font-size: 44px;
+        width: 200px;
+        margin: 0px 20px;
+    }
+}
+
 h2 {
     font-family: "SourceSansPro-Bold";
     font-size: 45px;
@@ -68,6 +95,12 @@ h2 {
     color: #000000;
     letter-spacing: -1px;
     margin-bottom: 1rem;
+}
+
+@media (max-width: 414px) {
+    h2 {
+        font-size: 30px;
+    }
 }
 
 h3 {
@@ -129,6 +162,26 @@ p.lead {
     top: 184px;
     border-radius: 10px;
     cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+    .cta {
+        top: 110px;
+    }
+}
+
+@media (max-width: 767px) {
+    .cta {
+        top: 55px;
+    }
+}
+
+@media (max-width: 414px) {
+    .cta {
+        top: 70px;
+        width: 200px;
+        margin: 0px 20px;
+    }
 }
 
 .cta-price {
@@ -220,19 +273,18 @@ p.lead {
     color: #998a9b;
 }
 
-@media (max-width:767px) {
-    h1 {
-        font-size: 40px;
-    }
-    h2 {
-        font-size: 30px;
-    }
-}
-
 /* FEATURES
 ----------------------*/
 .feature {
     float: left;
+}
+
+@media (max-width: 414px) {
+    .feature {
+        float: left;
+        margin: 0px 50px;
+        left: 0px;
+    }
 }
 
 .feature-text {
@@ -245,6 +297,12 @@ p.lead {
     letter-spacing: normal;
     text-align: left;
     color: #000000;
+}
+
+@media (max-width: 414px) {
+    .feature-text {
+        font-size: 17px;
+    }
 }
 
 .feature .feature-img {
@@ -262,23 +320,53 @@ p.lead {
     top: -235px;
 }
 
+@media (max-width: 414px) {
+    .feature-img img {
+        float: none;
+        display: block; 
+        margin: 10px 18%;
+        top: 10px;
+        max-width: 60%;
+    }
+}
+
 .feature-img-right img {
     float: right;
     height: auto;
     max-width: 40%;
     overflow: hidden;
     position: relative;
-    top: -235px;
+    top: -470px;
+    left: 220px;
+}
+
+@media (max-width: 414px) {
+    .feature-img-right img {
+        float: none;
+        display: block; 
+        margin: 10px 18%;
+        top: -455px;
+        max-width: 60%;
+        left: 0px;
+    }
 }
 
 .feature-right {
     float: right;
     height: auto;
-    max-width: 40%;
+    max-width: 100%;
     overflow: hidden;
     position: relative;
     top: -235px;
     left: -50px;
+}
+
+@media (max-width: 414px) {
+    .feature-right {
+        float: left;
+        margin: 0px 50px;
+        left: -13px;
+    }
 }
 
 .feature-left {
@@ -290,6 +378,15 @@ p.lead {
     top: -235px;
 }
 
+@media (max-width: 414px) {
+    .feature-left {
+        float: left;
+        margin: 0px 50px;
+        left: 0px;
+        top: -475px;
+    }
+}
+
 .feature-img-left img {
     float: left;
     height: auto;
@@ -299,7 +396,17 @@ p.lead {
     top: -235px;
   }
 
-.feature-img-right img {
+@media (max-width: 414px) {
+    .feature-img-left img {
+        float: none;
+        display: block; 
+        margin: 10px 18%;
+        top: -210px;
+        max-width: 70%;
+    }
+}
+
+/* .feature-img-right img {
     float: right;
     height: auto;
     max-width: 50%;
@@ -307,7 +414,7 @@ p.lead {
     position: relative;
     top: -460px;
     left: 200px;
-}
+} */
 
 /* NAVBAR
 ----------------------*/
@@ -372,7 +479,7 @@ a.navbar-brand:hover {
         padding-bottom: 1rem;
     }
     .navbar-nav .nav-item {
-        text-align: center;
+        text-align: left;
     }
 }
 
@@ -409,12 +516,46 @@ header {
     top: 140px;
 }
 
+@media (max-width: 1200px) {
+    .tagline {
+        top: 80px;
+    }
+}
+
+@media (max-width: 414px) {
+    .tagline {
+        width: 300px;
+    }
+}
+
 .hero {
     width: 600px;
     height: 600px;
+    padding: 30px;
     position: relative;
     top: -300px;
     left: 300px;
+}
+
+@media (max-width: 1200px) {
+    .hero {
+        width: 50%;
+        height: auto;
+        top: -300px;
+        left: 250px;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero {
+        left: 200px;
+    }
+}
+
+@media (max-width: 674px) {
+    .hero {
+        display: none;
+    }
 }
 
 .hero-holder {
@@ -422,6 +563,7 @@ header {
     top:10px;
 
 }
+
 
 .img-fluid {
     position: relative;
@@ -441,6 +583,8 @@ header {
 @media (max-width:767px) {
     .tagline {
         font-size: 17px;
+        top: 10px;
+        margin: 0px 20px;
     }
     .img-holder {
         padding-bottom: 100%;
@@ -471,6 +615,25 @@ header {
     cursor: default;
 }
 
+@media (max-width: 1200px) {
+    .fold-text {
+        margin-top: 45px;
+    }
+}
+
+@media (max-width: 674px) {
+    .fold-text {
+        font-size: 35px;
+        margin-top: 340px;
+    }
+}
+
+@media (max-width: 414px) {
+    .fold-text {
+        font-size: 28px;
+    }
+}
+
 .first-fold {
     max-width: 100vw;
     background-color: #afc6f5;
@@ -485,9 +648,27 @@ header {
     top: -650px;
 }
 
+@media (max-width: 414px) {
+    .second-fold {
+        top: -780px;
+    }
+}
+
 /* PRICING
 ----------------------*/
 
+.sectionTwo {
+    padding: 80px 15px;
+    margin-bottom: 200px
+}
+
+@media (max-width:414px) {
+    .sectionTwo {
+        padding: 0;
+        margin-top: 80px;
+        margin-bottom: 80px
+    }
+}
 .pricing-text {
     position: relative;
     margin-top: -630px;
@@ -503,6 +684,13 @@ header {
     color: #1f1f89;
     text-align: center;
     cursor: default;
+}
+
+@media (max-width: 414px) {
+    .pricing-text {
+        margin-top: -785px;
+        font-size: 40px;
+    }
 }
 
 .pricing-subtitle {
@@ -521,11 +709,23 @@ header {
     cursor: default;
 }
 
+@media (max-width: 414px) {
+    .pricing-subtitle {
+        font-size: 16px;
+    }
+}
+
 .pricing-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+/* @media (max-width:414px) {
+    .pricing-container {
+        display: none;
+    }
+} */
 
 .pricing-container-box {
     width: 750px;
@@ -533,6 +733,17 @@ header {
     border-radius: 10px;
     background-color: #cddbf1;
     margin-top: 120px;
+}
+
+@media (max-width: 414px) {
+    .pricing-container-box{
+        width: 200px;
+        height: 166px;
+        display: block; 
+        margin: 40px 20px;
+
+
+    }
 }
 
 .pricing-container-left {
@@ -546,12 +757,26 @@ header {
 
 }
 
+@media (max-width: 414px) {
+    .pricing-container-left {
+        width: 200px;
+        height: 166px;
+    }
+}
+
 .dollar {
     position: relative;
     top: 64px;
     left: 50px;
     color: #ffffff;
     font-family: "Ubuntu-Bold","SourceSansPro-Bold";
+}
+
+@media (max-width:414px) {
+    .dollar {
+        top: 30px;
+        left: 30px;
+    }
 }
 
 .price {
@@ -562,6 +787,13 @@ header {
     font-size: 120px;
 }
 
+@media (max-width:414px) {
+    .price {
+        top: -35px;
+        font-size: 85px;
+    }
+}
+
 .duration {
     position: relative;
     top: -120px;
@@ -569,6 +801,16 @@ header {
     color: #ffffff;
     font-family: "Ubuntu-Bold","SourceSansPro-Bold";
     font-size: 45px;
+}
+
+@media (max-width:414px) {
+    .duration {
+        display: block;
+        position: relative;
+        top: -70px;
+        left: 75px;
+        font-size: 25px;
+    }
 }
 
 .valueprop {
@@ -582,6 +824,12 @@ header {
     left: -100px;
     margin-bottom: 20px;
 
+}
+
+@media (max-width:414px) {
+    .valueprop {
+        display: none;
+    }
 }
 
 .valueprop-item {
@@ -813,4 +1061,10 @@ header {
 .footer {
     height: 200px;
     background-color: #1f1f89;
+}
+
+@media (max-width:414px) {
+    .footer {
+        height: 100px;
+    }
 }

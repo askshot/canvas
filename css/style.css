@@ -25,15 +25,16 @@
 
 a {
     color: #000000;
-    font-family: "Poppins-Semibold";
+    font-family: "Poppins";
+    font-weight: 600;
     font-size: 20px;
 }
 
 a.navlink {
     width: 53px;
     height: 10px;
-    font-family: "Poppins-Semibold";
-    font-weight: bold;
+    font-family: "Poppins";
+    font-weight: 600;
     font-style: normal;
     font-stretch: normal;
     line-height: normal;
@@ -56,10 +57,10 @@ a:hover {
 h1 {
     width: 414px;
     height: 104px;
-    font-family: "Ubuntu-Bold","SourceSansPro-Bold";
+    font-family: "Ubuntu","Source Sans Pro";
     position: relative;
     font-size: 90px;
-    font-weight: bold;
+    font-weight: 700;
     font-style: normal;
     font-stretch: normal;
     line-height: normal;
@@ -89,9 +90,9 @@ h1 {
 }
 
 h2 {
-    font-family: "SourceSansPro-Bold";
+    font-family: "Source Sans Pro";
     font-size: 45px;
-    font-weight: 300;
+    font-weight: 700;
     color: #000000;
     letter-spacing: -1px;
     margin-bottom: 1rem;
@@ -145,7 +146,8 @@ p.lead {
     padding: 0.375rem 1.35rem;
     transition: all 0.3s ease;
     background-color: #3878ff;
-    font-family: "Poppins-Semibold";
+    font-family: "Poppins";
+    font-weight: 600;
     position: relative;
     border-radius: 10px;
 }
@@ -156,7 +158,8 @@ p.lead {
     padding: 0.375rem 1.35rem;
     transition: all 0.3s ease;
     background-color: #3878ff;
-    font-family: "Poppins-Semibold";
+    font-family: "Poppins";
+    font-weight: 600;
     position: relative;
     width: 200px;
     top: 184px;
@@ -186,11 +189,11 @@ p.lead {
 
 .cta-price {
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 600;
     padding: 0.375rem 1.35rem;
     transition: all 0.3s ease;
     background-color: #3878ff;
-    font-family: "Poppins-Semibold";
+    font-family: "Poppins";
     margin: auto;
     margin-top: 50px;
     color: #ffffff;
@@ -288,7 +291,7 @@ p.lead {
 }
 
 .feature-text {
-    font-family: "SourceSansPro-Light";
+    font-family: "Source Sans Pro";
     font-size: 20px;
     font-weight: 300;
     font-style: normal;
@@ -503,7 +506,7 @@ header {
 .tagline {
     width: 404px;
     height: 48px;
-    font-family: "SourceSansPro-Light";
+    font-family: "Source Sans Pro";
     font-size: 20px;
     font-weight: 300;
     font-style: normal;
@@ -603,9 +606,9 @@ header {
     height: 100%;
     align-items: center;
     justify-content: center;
-    font-family: "SourceSansPro-Bold";
+    font-family: "Source Sans Pro";
     font-size: 50px;
-    font-weight: bold;
+    font-weight: 700;
     font-style: normal;
     font-stretch: normal;
     line-height: normal;
@@ -674,9 +677,9 @@ header {
     margin-top: -630px;
     display: flex;
     justify-content: center;
-    font-family: "SourceSansPro-Bold";
+    font-family: "Source Sans Pro";
     font-size: 50px;
-    font-weight: bold;
+    font-weight: 700;
     font-style: normal;
     font-stretch: normal;
     line-height: normal;
@@ -698,7 +701,8 @@ header {
     margin-top: 30px;
     display: flex;
     justify-content: center;
-    font-family: "SourceSansPro-Light";
+    font-family: "Source Sans Pro";
+    font-weight: 300;
     font-size: 20px;
     font-style: normal;
     font-stretch: normal;
@@ -769,7 +773,8 @@ header {
     top: 64px;
     left: 50px;
     color: #ffffff;
-    font-family: "Ubuntu-Bold","SourceSansPro-Bold";
+    font-family: "Ubuntu","Source Sans Pro";
+    font-weight: 700;
 }
 
 @media (max-width:414px) {
@@ -783,7 +788,8 @@ header {
     position: relative;
     left: 60px;
     color: #ffffff;
-    font-family: "Ubuntu-Bold","SourceSansPro-Bold";
+    font-family: "Ubuntu","Source Sans Pro";
+    font-weight: 700;
     font-size: 120px;
 }
 
@@ -799,7 +805,8 @@ header {
     top: -120px;
     left: 200px;
     color: #ffffff;
-    font-family: "Ubuntu-Bold","SourceSansPro-Bold";
+    font-family: "Ubuntu","Source Sans Pro";
+    font-weight: 700;
     font-size: 45px;
 }
 
@@ -815,7 +822,8 @@ header {
 
 .valueprop {
     list-style-image: url('../images/ListIcon.png');
-    font-family: "SourceSansPro-Semibold";
+    font-family: "Source Sans Pro";
+    font-weight: 600;
     font-size: 17px;
     color: #000000;
     position: relative;

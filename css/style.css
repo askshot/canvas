@@ -292,7 +292,7 @@ p.lead {
 
 .feature-text {
     font-family: "Source Sans Pro";
-    font-size: 20px;
+    font-size: 19px;
     font-weight: 300;
     font-style: normal;
     font-stretch: normal;
@@ -633,7 +633,7 @@ header {
 
 @media (max-width: 414px) {
     .fold-text {
-        font-size: 28px;
+        font-size: 27px;
     }
 }
 

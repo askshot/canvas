@@ -100,7 +100,7 @@ h2 {
 
 @media (max-width: 414px) {
     h2 {
-        font-size: 30px;
+        font-size: 28px;
     }
 }
 
@@ -304,7 +304,7 @@ p.lead {
 
 @media (max-width: 414px) {
     .feature-text {
-        font-size: 16px;
+        font-size: 15px;
     }
 }
 

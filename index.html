@@ -88,7 +88,12 @@
         <div class="container mt-5">
             <h1>Find your<br>inspiration.</h1>
             <h2 class="tagline">Gain access to thousands (and growing!)<br>of published mobile app UI designs to find<br>inspiration and get ahead of the curve. </h2>
-            <div class="cta cta-outline-light"> <a href="https://goo.gl/forms/lq0QgDPd0EQYINd52" style="color:#fff;" target="_blank">Try now for free</a></div>
+            <div class="cta cta-outline-light" onclick="FBpixel()"> <a href="https://goo.gl/forms/lq0QgDPd0EQYINd52" style="color:#fff;" target="_blank">Try now for free</a></div>
+            <script type="text/javascript">
+            function FBpixel() {
+                fbq('track', 'Lead');
+            }
+            </script>
             <div class="hero-holder"><img src="images/hero.svg" alt="hero" class="hero"></div>
         </div>
     </header>

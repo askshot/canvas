@@ -1,0 +1,173 @@
+<head>
+    <title>Supply|UI - Mobile Screenshot Library</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Supply|UI - iOS Mobile Screenshot Library: SupplyUI is a collection of published iOS mobile app designs.">
+    <meta name="keywords" content="iOS, iPhone XS, mobile app design, mobile first design, mobile design, mobile design recommendations">
+    <meta name="google-site-verification" content="cmgm-Zd6ySX3AGgyTACgc7CG-wB4gyYVpIMnwYmu0to" />
+
+    <!-- Font -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,600,700,800,900" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Themify Icons -->
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <!-- Owl carousel -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- Main css -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Favicon-->
+    <link rel="shortcut icon" type="image/png" href="images/logo.png"/>
+
+    <!-- Modal CSS-->
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+
+	<!--<link rel="stylesheet" href="css/resets.css"> --> <!-- CSS reset -->
+	<!-- <link rel="stylesheet" href="css/modalStyle.css"> Resource style -->
+	<!-- <link rel="stylesheet" href="css/demos.css"> Demo style -->
+  	
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128997659-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-128997659-1');
+    </script>
+
+    <!-- userbase sdk -->
+    <script type="text/javascript" src="https://sdk.userbase.com/1/userbase.js"></script>
+
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="30">
+    <!-- Nav Menu -->
+
+    <div class="nav-menu fixed-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-dark navbar-expand-lg">
+                        <a class="navbar-brand" href="index.html"><img src="images/logo.svg" class="img-fluid" alt="logo"> Supply|UI</a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+                        <div class="collapse navbar-collapse" id="navbar">
+                            <ul class="navbar-nav ml-auto">
+                                <!-- <li class="nav-item"> <a class="navbar" href="#home">HOME <span class="sr-only">(current)</span></a> </li>
+                                <li class="nav-item"> <a class="navbar" href="#pricing">PRICING</a> </li>
+                                <li class="nav-item"> <a class="navbar" href="https://blog.supplyui.com" target="_blank" >BLOG</a> </li> -->
+                                <li id="logout-button" class="nav-item"><span id="logout-button"></span></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="bg-gradient" id="home">
+        <div id="auth-view">
+            <form id="login-form" class="login-form">
+                <input id="login-username" type="text" required placeholder="Username">
+                <input id="login-password" type="password" required placeholder="Password">
+                <input type="submit" value="Sign back in">
+            </form>
+            <div id="login-error"></div>
+            <div id="logout-error"></div>
+        </div>
+
+        <div id="airtable" class="container mt-5">
+            <p style="font-family: 'Open+Sans:bold', sans-serif; font-size:18px; ">Hi there 👋 <br><br> Thanks for signing up to SupplyUI! <br>it would be awesome if you could share with me your feedback at <a style="font-family: 'Open+Sans:bold', sans-serif; font-size:18px; text-decoration:none " href="mailto:hello@supplyui.com?subject=I%20Am%20A%20Nice%20Person%20Therefore%20I%20Feedback">hello@supplyui.com</a></p>
+            <iframe class="airtable-embed" src="https://airtable.com/embed/shrdRLr7cPU8eu6V6?backgroundColor=orange&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="600" style="background: transparent; border: 1px solid #ccc;"></iframe>
+        </div>
+    </header>
+
+    <div class="sectionTwo" id="pricing">
+        <p class="fold-text-1">Pricing</p>
+        <p class="pricing-tagline">One price per user, unlimited access</p>
+        <div class="pricing-modal">
+            <div class="pricing-modal-box">
+                <p class="pricing-currency">$</p>
+                <p class="pricing-price">35</p>
+                <p class="pricing-annually">/yr</p>
+                <div class="pricing-usp">
+                    <blockquote>Access to all features including updates</blockquote>
+                    <blockquote>Access to new updated screenshots</blockquote>
+                    <blockquote>Request for new apps not in the library</blockquote>
+                    <blockquote>Access to premium support</blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- userbase initialisation-->
+    <script type="text/javascript">
+        userbase.init({ appId: '3ffac969-ac6f-42f2-b55c-d51499816a19' })
+
+        function handleLogin(e) {
+            e.preventDefault()
+
+            const username = document.getElementById('login-username').value
+            const password = document.getElementById('login-password').value
+
+            userbase.signIn({ username, password, rememberMe: 'none' })
+                .then((user) => showAirtable())
+                .catch((e) => document.getElementById('login-error').innerHTML = e)
+        }
+
+        function handleLogout() {
+            userbase.signOut()
+            .then(() => showAuth())
+            .catch((e) => document.getElementById('logout-error').innerText = e)
+        }
+
+        function showAirtable() {
+            document.getElementById('auth-view').style.display = 'none'
+            document.getElementById('airtable').style.display = 'block'
+            document.getElementById('pricing').style.display = 'block'
+            document.getElementById('logout-button').innerHTML = '<span id="logout-button" target="_blank" class="sec-btn sec-btn-outline-light my-3 my-sm-0 ml-lg-3">Logout</span>'
+            
+        }
+
+        function showAuth() {
+            document.getElementById('auth-view').style.display = 'block'
+            document.getElementById('airtable').style.display = 'none'
+            document.getElementById('pricing').style.display = 'none'
+            document.getElementById('logout-button').innerHTML = '';
+        }
+        
+        document.getElementById('login-form').addEventListener('submit', handleLogin)
+        document.getElementById('airtable').style.display = 'none'
+        document.getElementById('pricing').style.display = 'none'
+        
+        window.onload=function(){
+            document.getElementById('logout-button').addEventListener('click', handleLogout)
+        }
+
+    </script>
+
+    <!-- jQuery and Bootstrap -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Plugins JS -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    <!-- Modal JS-->
+    <script src="js/placeholders.min.js"></script> <!-- polyfill for the HTML5 placeholder attribute -->
+    <script src="js/main.js"></script> <!-- Resource JavaScript -->
+
+
+
+</body>
+
+</html>

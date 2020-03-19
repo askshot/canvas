@@ -16,6 +16,8 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,600,700,800,900" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -28,6 +30,14 @@
 
     <!-- Favicon-->
     <link rel="shortcut icon" type="image/png" href="images/logo.png"/>
+
+    <!-- Modal CSS-->
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+
+	<!--<link rel="stylesheet" href="css/resets.css"> --> <!-- CSS reset -->
+	<!-- <link rel="stylesheet" href="css/modalStyle.css"> Resource style -->
+	<!-- <link rel="stylesheet" href="css/demos.css"> Demo style -->
+  	
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128997659-1"></script>
@@ -55,9 +65,9 @@
     <noscript><img height="1" width="1" style="display:none"
         src="https://www.facebook.com/tr?id=2263239793909107&ev=PageView&noscript=1"
     /></noscript>
-  <!-- End Facebook Pixel Code -->
+    <!-- End Facebook Pixel Code -->
 
-  <!-- Hotjar Tracking Code for https://supplyui.com -->
+    <!-- Hotjar Tracking Code for https://supplyui.com -->
     <script>
         (function(h,o,t,j,a,r){
             h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
@@ -69,10 +79,37 @@
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
 
+    <!-- Script to submit form to airtable -->
+    <script src="js/airtable.js"></script>
+
+    <!-- userbase sdk -->
+    <script type="text/javascript" src="https://sdk.userbase.com/1/userbase.js"></script>
+
+    <!--signup form script -->
+    <!-- <script id="formHtml" type="text/html">
+        <form id="signup-form">
+            <input id="signup-username" type="text" required placeholder="Username">
+            <input id="signup-password" type="password" required placeholder="Password">
+            <input type="submit" value="Create an account">
+        </form>
+        <div id="signup-error"></div>
+    </script>
+
+    <script type="text/javascript">
+        function toggleDiv() {
+            console.log("hello mark")
+            document.getElementById("formclick").remove();
+            document.getElementById("signupForm").innerHTML = document.getElementById('formHtml').innerHTML;
+        }
+    </script> -->
+
+    
+    <!--end signup form script -->
+
+
 </head>
 
-<body data-spy="scroll" data-target="#navbar" data-offset="30">
-
+<body data-spy="scroll" data-target="#navbar" data-offset="30" onload="loadContent()">
     <!-- Nav Menu -->
 
     <div class="nav-menu fixed-top">
@@ -83,11 +120,11 @@
                         <a class="navbar-brand" href="index.html"><img src="images/logo.svg" class="img-fluid" alt="logo"> Supply|UI</a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
                         <div class="collapse navbar-collapse" id="navbar">
                             <ul class="navbar-nav ml-auto">
-                                <li class="nav-item"> <a class="navbar" href="#first-fold">Features <span class="sr-only">(current)</span></a> </li>
-                                <li class="nav-item"> <a class="navbar" href="#second-fold">Pricing</a> </li>
-                                <!--<li class="nav-item"> <a class="navbar" href="https://blog.supplyui.com" target="_blank" >Blog</a> </li>-->
-                                <!--<li class="nav-item"><a href="https://goo.gl/forms/lq0QgDPd0EQYINd52" target="_blank" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3">Try Now</a></li>-->
-                                <li class="nav-item"><a href="http://www.app.supplyui.com/" target="_blank" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3">Try Now</a></li>
+                                <li class="nav-item"> <a class="navbar" href="#home">HOME <span class="sr-only">(current)</span></a> </li>
+                                <li class="nav-item"> <a class="navbar" href="#features">FEATURES</a> </li>
+                                <!-- <li class="nav-item"> <a class="navbar" href="#pricing">PRICING</a> </li>
+                                <li class="nav-item"> <a class="navbar" href="https://blog.supplyui.com" target="_blank" >BLOG</a> </li> -->
+                                <li class="nav-item"><a href="product.html" target="_blank" class="sec-btn sec-btn-outline-light my-3 my-sm-0 ml-lg-3">Login</a></li>    
                             </ul>
                         </div>
                     </nav>
@@ -96,83 +133,127 @@
         </div>
     </div>
 
-
     <header class="bg-gradient" id="home">
         <div class="container mt-5">
-            <h1>Find your<br>inspiration.</h1>
-            <h2 class="tagline">Gain access to hundreds (and growing!)<br>of published mobile app UI designs to find<br>inspiration and get ahead of the curve. </h2>
-            <div class="cta cta-outline-light" onclick="FBpixel()"> <a href="http://www.app.supplyui.com/" style="color:#fff;" target="_blank">Try now for free</a></div>
+            <h1>Find your inspiration.</h1>
+            <h2 class="tagline">Gain access to hundreds (and growing!) of published mobile app UI <br>designs to find inspiration and get ahead of the curve. </h2>
+            <h3 class="social-validation" id="signupcount"></h3>
+            <!-- <input type="submit" id="formclick" onclick="toggleDiv()" value="I'm interested!">
+            <h3 class="tagline" id="signupForm"></h3> -->
+            <form id="signup-form">
+                <input id="signup-username" type="text" required placeholder="Username">
+                <input id="signup-password" type="password" required placeholder="Password">
+                <input type="submit" value="Create an account">
+            </form>
+            <div id="signup-error"></div>
+
+            <!-- userbase initialisation-->
+            <script type="text/javascript">
+                userbase.init({ appId: '3ffac969-ac6f-42f2-b55c-d51499816a19' })
+            
+                function handleSignUp(e) {
+                    e.preventDefault()
+            
+                    const username = document.getElementById('signup-username').value
+                    const password = document.getElementById('signup-password').value
+            
+                    userbase.signUp({ username, password, rememberMe: 'session' })
+                        // .then((user) => alert('You signed up!'))
+                        .then((user) => window.location.replace("https://www.app.supplyui.com/")) 
+                        .catch((e) => document.getElementById('signup-error').innerHTML = e)
+                }
+            
+                document.getElementById('signup-form').addEventListener('submit', handleSignUp)
+            </script>
+            
+            <!-- <form action="https://getform.io/f/aa7e6765-705e-4e75-81fe-ce953e2a09a8" method="POST">
+                <input type="text" email="firstname" name="email address" placeholder="janedoe@gmail.com" required>
+                <input type="submit" id="formclick" onclick="FBpixel()" value="I'm interested!">
+            </form> -->
+            
+                
+            <!-- <script type="text/javascript">
+                document.onreadystatechange = function toggleDiv() {
+                    if (document.readyState == "interactive") {
+                        document.getElementById("toggleButton").click(function(){
+                            document.getElementById("signupForm").toggle();
+                        })
+                    }
+                }
+            </script>  -->
+             <!--<a href="https://goo.gl/forms/lq0QgDPd0EQYINd52" style="color:#fff;" target="_blank">Try now for free</a></div>-->
             <script type="text/javascript">
             function FBpixel() {
                 fbq('track', 'Lead');
                 console.log("fb tags firing");
             }
             </script>
-            <div class="hero-holder"><img src="images/hero.svg" alt="hero" class="hero"></div>
+            <div class="hero-holder"><img src="images/airtable.png" alt="hero" class="hero"></div>
         </div>
     </header>
 
-    <div class="first-fold" id="first-fold">
-        <p class="fold-text">Spend more time designing<br>and less time researching.</p>
+    <div class="first-fold">
+        <h2 class="tagline">Featuring apps like</h2>
+        <div class="flex-container">
+            <div class="app-row">
+                <div class="app-col"><img src="images/eventbrite.png" alt="eventbrite" ></div>
+                <div class="app-col"><img src="images/netflix.png" alt="netflix" ></div>
+                <div class="app-col"><img src="images/letterboxd.png" alt="letterboxd" ></div>
+                <div class="app-col"><img src="images/supergreat.png" alt="supergreat" ></div>
+                <div class="app-col"><img src="images/techcrunch.png" alt="techcrunch" ></div>
+                <div class="app-col"><img src="images/chefsfeed.png" alt="chefsfeed" ></div>
+            </div>
+        </div>
+        <h2 class="tagline" id="features">and others</h2> 
     </div>
-
     <!-- // end .section -->
-    <div class="section">
 
-        <div class="container">
+    <div class="section">
+        <p class="fold-text">Features</p>
+        <div class="container-features">
             <div class="row">
                 <div class="feature">
                     <h2>Screenshots categorised<br>by functions</h2>
                     <p class="feature-text">Easily search or filter for screenshots based <br> on the functions. Compare across different<br>products that have similar functions (e.g. <br>shopping cart, referral).</p>
                 </div>
-            </div>
-            <div class="feature-img">
-                <img src="images/screenshots.png" alt="screenshot illustration">
+                <div class="feature-img">
+                    <img src="images/usp1.png" alt="screenshot illustration">
+                </div>
             </div>
         </div>
-    </div>
-    <!-- // end .section -->
-
-    <div class="section">
-
-        <div class="container">
-            <div class="row-alt">
-                <div class="feature-right">
+        <div class="container-features">
+            <div class="row">
+                <div class="feature">
                     <h2>Be in the know, with<br>screenshot metadata</h2>
                     <p class="feature-text">Font types and color hex codes used <br>in each screenshots are provided so <br>that you can jump straight into creating<br>wireframes and prototypes.</p>
                 </div>
-                <div class="feature-img-left">
-                    <img src="images/metadata.png" alt="metadata illustration">
-                </div> 
+                <div class="feature-img-1">
+                    <img src="images/usp2.png" alt="metadata illustration">
+                </div>
             </div>
         </div>
+        <div class="container-features">
+                <div class="row">
+                    <div class="feature">
+                        <h2>Screenshots are updated<br>with versioning</h2>
+                        <p class="feature-text">Font types and color hex codes used <br>in each screenshots are provided so <br>that you can jump straight into creating<br>wireframes and prototypes.</p>
+                    </div>
+                    <div class="feature-img">
+                        <img src="images/usp3.png" alt="screenshot illustration">
+                    </div>
+                </div>
+            </div>
     </div>
     <!-- // end .section -->
 
+    <!--
     <div class="section">
-
-        <div class="container">
-            <div class="row">
-                <div class="feature-left">
-                    <h2>Screenshots are updated<br>with versioning</h2>
-                    <p class="feature-text">App designs don't remain static <br> and neither do our screenshots. We are<br>constantly updating our screenshots<br>and allow you to view them across<br>versions.</p>
-                </div>
-                <div class="feature-img-right">
-                    <img src="images/versioning.png" alt="screenshot illustration">
-                </div>
-
-            </div>
-            <!-- <div class="feature-img">
-                <img src="images/screenshots.png" alt="screenshot illustration">
-            </div> -->
+        <div class="second-fold" id="second-fold">
+            <p class="fold-text">With over 6,000+ screenshots<br>never run out of inspiration.</p>
         </div>
-    </div>
-    <!-- // end .section -->
-
-    <div class="second-fold" id="second-fold">
-        <p class="fold-text">With over 400+ screenshots<br>never run out of inspiration.</p>
-    </div>
-
+    <div> -->
+    
+    <!--
     <div class="sectionTwo" id="pricing">
         <div class="pricing-text">One price per user, <br> unlimited access</div>
         <div class="pricing-subtitle">Pay once annually and get access to all our screenshots<br> and features even while they are continuously updated.</div>
@@ -191,13 +272,13 @@
                 </ul>
             </div>
         </div>
-        <div class="cta-price cta-outline-light"><a href="http://www.app.supplyui.com/" style="color:#fff;" target="_blank">Try now for free</a></div>
-    </div>
+        <div class="cta-price cta-outline-light"><a href="https://goo.gl/forms/lq0QgDPd0EQYINd52" style="color:#fff;" target="_blank">Try now for free</a></div>
+    </div>-->
     <!-- // end .section -->
 
-    <div class="footer">
 
-    </div>
+    <div class="footer"></div>
+
     <!-- jQuery and Bootstrap -->
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
@@ -205,6 +286,11 @@
     <script src="js/owl.carousel.min.js"></script>
     <!-- Custom JS -->
     <script src="js/script.js"></script>
+    <!-- Modal JS-->
+    <script src="js/placeholders.min.js"></script> <!-- polyfill for the HTML5 placeholder attribute -->
+    <script src="js/main.js"></script> <!-- Resource JavaScript -->
+
+    
 
 </body>
 
